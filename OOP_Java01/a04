@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class assignment4 {
+
+	//In the main program when you print the results from both methods 
+	//also you need to state if the result is negative or positive 
+	public static void main(String[] args){
+		//accepts from user 3 integers
+		Scanner input = new Scanner (System.in);
+		int[] num = new int[3];
+		for (int i=0;i<3;i++){
+			System.out.print("Please enter your integer #"+(i+1)+": ");
+			num[i] = input.nextInt();
+		}
+		System.out.println("");
+		
+		if (subtraction(num[0],num[1])>0){
+			System.out.println("The difference between the first two numbers is " +subtraction(num[0],num[1])+ " and it is positive.");
+		} else if(subtraction(num[0],num[1])<0){
+			System.out.println("The difference between the first two numbers is " +subtraction(num[0],num[1])+ " and it is negative.");
+		} else {
+			System.out.println("The difference between the first two numbers is " +subtraction(num[0],num[1])+ " and it is not positive/negative.");
+		}
+		
+		if (subtraction(num[0],num[1],num[2])>0){
+			System.out.println("The difference between all entered numbers is " +subtraction(num[0],num[1],num[2])+ " and it is positive.");
+		} else if (subtraction(num[0],num[1],num[2])<0) {
+			System.out.println("The difference between all entered numbers is " +subtraction(num[0],num[1],num[2])+ " and it is negative.");
+		} else {
+			System.out.println("The difference between all entered numbers is " +subtraction(num[0],num[1],num[2])+ " and it is not positive/negative.");
+		}
+		
+
+	}
+	
+	//Method#1 is used to subtract the first two numbers (num1-num2)
+	public static int subtraction(int x, int y){
+		int z = x-y;
+		return z;
+	}
+	
+	//method#2 is used to subtract all the  3 numbers (num1-num2-num3).
+	public static int subtraction(int a, int b, int c){
+		int d = a-b-c;
+		return d;
+	}
+}
